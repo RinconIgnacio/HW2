@@ -37,3 +37,13 @@ const Track* Playlist::find_track(const std::string& title) const {
 
     return nullptr;
 }
+
+Duration Playlist::total_length() const {
+    Duration total;
+
+    for (int i = 0; i < m_count; i++) {
+        total = total + m_tracks[i].length;
+    }
+
+    return total;
+}
