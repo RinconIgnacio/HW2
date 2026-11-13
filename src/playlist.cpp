@@ -9,3 +9,7 @@ Playlist::Playlist(int capacity) {
     m_count = 0;
     m_tracks = new Track[m_capacity];
 }
+
+Playlist::~Playlist() {
+    delete[] m_tracks;
+}
