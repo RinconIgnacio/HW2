@@ -20,3 +20,7 @@ Duration Duration::operator+(const Duration& other) const {
     result.m_total_seconds = m_total_seconds + other.m_total_seconds;
     return result;
 }
+
+bool Duration::operator==(const Duration& other) const {
+    return m_total_seconds == other.m_total_seconds;
+}
