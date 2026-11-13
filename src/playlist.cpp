@@ -23,3 +23,7 @@ bool Playlist::add_track(const Track& track) {
     m_count++;
     return true;
 }
+
+int Playlist::size() const {
+    return m_count;
+}
