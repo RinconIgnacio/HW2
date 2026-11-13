@@ -14,3 +14,9 @@ Duration::Duration(int minutes, int seconds) {
 int Duration::total_seconds() const {
     return m_total_seconds;
 }
+
+Duration Duration::operator+(const Duration& other) const {
+    Duration result;
+    result.m_total_seconds = m_total_seconds + other.m_total_seconds;
+    return result;
+}
